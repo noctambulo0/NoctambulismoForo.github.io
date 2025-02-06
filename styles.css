@@ -1,0 +1,228 @@
+/* Estilos generales */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Arial', sans-serif;
+  text-align: center;
+  padding: 0;
+  margin: 0;
+  background-color: #121212; /* Predeterminado para dark mode */
+  color: #eee; /* Predeterminado para dark mode */
+}
+
+body.light-mode {
+  background-color: #ffffff; /* Fondo claro */
+  color: #000000; /* Texto oscuro */
+}
+
+header {
+  background-color: #1c1c1c;
+  color: #f39c12;
+  padding: 30px 0;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+body.light-mode header {
+  background-color: #f4f4f4; /* Fondo claro para header */
+  color: #333; /* Texto oscuro para header */
+}
+
+h1 {
+  font-size: 3rem;
+  margin-bottom: 10px;
+  color:#8b0c0c;
+  text-shadow: rgb(158, 42, 7) 0px 0px 5px;
+ text-decoration-line:underline overline;
+ margin-top: 30px;
+}
+
+body.light-mode h1 {
+  color: #333; /* Título oscuro en light mode */
+}
+
+p {
+  font-size: 1.2rem;
+}
+
+#post-section {
+  padding: 40px;
+}
+
+.post {
+  background-color: #2c3e50;
+  border-radius: 8px;
+  padding: 20px;
+  margin-bottom: 20px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+}
+
+body.light-mode .post {
+  background-color: #eaeaea; /* Fondo claro para las publicaciones */
+}
+
+a {
+  color: #c0392b;
+  text-decoration: none;
+  transition: 0.4ms;
+}
+
+a:hover {
+  text-shadow: #8b0c0c 0px 0px 5px;
+}
+
+h2 {
+  color: #f39c12;
+  font-size: 1.6rem;
+  margin-bottom: 15px;
+}
+
+body.light-mode h2 {
+  color: #e74c3c; /* Título en rojo en light mode */
+}
+
+footer {
+  background-color: #1c1c1c;
+  color: #ccc;
+  padding: 20px;
+  font-size: 1rem;
+  position: fixed;
+  width: 100%;
+  bottom: 0;
+}
+
+body.light-mode footer {
+  background-color: #f4f4f4; /* Fondo claro en footer */
+  color: #333; /* Texto oscuro en footer */
+}
+
+.heart {
+  color: #e74c3c;
+  font-size: 1.5rem;
+}
+
+/* Botón para cambio de tema */
+#theme-toggle {
+  background-color: #e74c3c; /* Rojo brillante para el dark mode */
+  color: white;
+  border: none;
+  padding: 12px 20px;
+  border-radius: 5px;
+  font-size: 1.2rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  margin-top: 20px;
+  text-align: center;
+}
+
+#theme-toggle:hover {
+  background-color: #c0392b; /* Rojo más oscuro al hacer hover */
+  transform: scale(1.05); /* Efecto de ampliación suave */
+}
+
+#theme-toggle:active {
+  background-color: #e74c3c;
+  transform: scale(1); /* Mantener el tamaño después de presionar */
+}
+
+body.light-mode #theme-toggle {
+  background-color: #f39c12; /* Amarillo brillante para el modo claro */
+  color: #333; /* Texto oscuro para el modo claro */
+}
+
+body.light-mode #theme-toggle:hover {
+  background-color: #e67e22; /* Amarillo más oscuro al hacer hover */
+}
+
+body.light-mode #theme-toggle:active {
+  background-color: #f39c12;
+}
+
+/* Media Queries para Responsividad */
+@media (max-width: 768px) {
+  h1 {
+    font-size: 2.5rem;
+  }
+
+  p {
+    font-size: 1rem;
+  }
+
+  #post-section {
+    padding: 20px;
+  }
+
+  .post {
+    padding: 15px;
+  }
+
+  h2 {
+    font-size: 1.4rem;
+  }
+
+  footer {
+    font-size: 0.9rem;
+  }
+
+  .heart {
+    font-size: 1.2rem;
+  }
+
+  #theme-toggle {
+    font-size: 1rem;
+    padding: 10px 15px;
+  }
+}
+
+@media (max-width: 480px) {
+  h1 {
+    font-size: 2rem;
+  }
+
+  p {
+    font-size: 0.9rem;
+  }
+
+  .post {
+    padding: 10px;
+  }
+
+  h2 {
+    font-size: 1.2rem;
+  }
+
+  footer {
+    font-size: 0.8rem;
+  }
+
+  .heart {
+    font-size: 1rem;
+  }
+
+  #theme-toggle {
+    font-size: 0.9rem;
+    padding: 8px 12px;
+  }
+}
+
+/* Post content e imágenes */
+.post-content {
+  margin-bottom: 20px;
+}
+
+.post-image {
+  width: 100%;
+  max-width: 500px;
+  height: auto;
+  margin: 10px 0;
+  border-radius: 8px;
+}
+
+@media (max-width: 768px) {
+  .post-image {
+    max-width: 100%;
+  }
+}
